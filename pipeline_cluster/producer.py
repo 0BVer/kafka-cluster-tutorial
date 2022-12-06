@@ -7,10 +7,9 @@ bootstrap_server = ["127.0.0.1:19092", "127.0.0.1:29092", "127.0.0.1:19092"]
 TOPIC_NAME = "additional"
 
 prod = KafkaProducer(bootstrap_servers=bootstrap_server)
-prod.bootstrap_connected()
 
 num = 0
-for i in range(1, 1001):
+for i in range(1, 101):
     num += i
     data = {'index': num}
     json_tf = json.dumps(data)
